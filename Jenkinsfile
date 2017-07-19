@@ -9,7 +9,8 @@ pipeline{
    stages{
      stage('Pull from Git'){
        steps{
-         git url: "git@github.com:marcelbirkner/selenium2-maven-project.git"
+         //git url: "git@github.com:marcelbirkner/selenium2-maven-project.git"
+         sh 'git pull git@github.com:marcelbirkner/selenium2-maven-project.git'
        }
      }
      stage('Create docker container'){
