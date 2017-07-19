@@ -10,7 +10,7 @@ pipeline{
      stage('Pull from Git'){
        steps{
          //git url: "git@github.com:marcelbirkner/selenium2-maven-project.git"
-         sh 'git clone https://github.com/marcelbirkner/selenium2-maven-project'
+         sh 'git fetch https://github.com/marcelbirkner/selenium2-maven-project'
          sh 'cd selenium2-maven-project'
        }
      }
