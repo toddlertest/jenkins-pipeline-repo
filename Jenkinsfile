@@ -21,7 +21,9 @@ pipeline{
      }
     stage('Run tests'){
       steps{
-        sh 'mvn clean test -Dgrid.server.url=http://localhost:4444/wd/hub'
+        dir('selenium2-maven-project'){
+          sh 'mvn clean test -Dgrid.server.url=http://localhost:4444/wd/hub'
+        }
       }
     }
     stage('Remove docker container'){
