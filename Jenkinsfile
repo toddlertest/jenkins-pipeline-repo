@@ -23,7 +23,9 @@ pipeline{
       }
     }
     stage('Remove docker container'){
-      sh 'docker rm -f selenium-grid'
+      steps{
+        sh 'docker rm -f selenium-grid'
+      }
     }
    }
 }
